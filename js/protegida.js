@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const container = document.querySelector(".container");
     const sub_container = document.querySelector(".sub-container");
     const img_container = document.querySelector(".img-container");
+    const select_options = document.querySelector("#opcoes-responsiva")
     let aberto = true;
 
     if (logado === "true") {
@@ -32,7 +33,11 @@ document.addEventListener('DOMContentLoaded', () => {
         deslogado();
         window.location.href = "index.html";
     });
-
+    select_options.addEventListener("change", (e)=>{
+        filtro.value = ""
+        const selectedValue = e.target.value;
+        updateURLAndFetchData(selectedValue);
+    })
     masc.addEventListener("click", () => {
         filtro.value = ""
         updateURLAndFetchData("masculino");
@@ -54,20 +59,12 @@ document.addEventListener('DOMContentLoaded', () => {
             img_container.style.top = "80px";
             sub_container.style.display = "none";
             abre_fecha.className = `fa-solid fa-chevron-down`;
-            abre_fecha.style.top = "20px";
-            abre_fecha.style.left = "580px";
             container.style.height = "50px";
-            logout.style.top = "0px";
-            logout.style.left = "570px";
         } else {
             aberto = true;
             img_container.style.top = "245px";
             sub_container.style.display = "flex";
-            abre_fecha.style.top = "190px";
-            abre_fecha.style.left = "320px";
             container.style.height = "210px";
-            logout.style.top = "-70px";
-            logout.style.left = "340px";
             abre_fecha.className = `fa-solid fa-chevron-up`;
         }
     });

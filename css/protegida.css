@@ -1,6 +1,7 @@
 *{
     margin: 0;
     padding: 0;
+    font-family: "Oswald";
 }
 body{
     background-color: rgb(129, 129, 129);
@@ -14,6 +15,7 @@ section{
     height: 100vh;
     display: flex;  
     gap: 10px;
+    width: 100%;
     flex-direction: column;
     align-items: center;
 }
@@ -28,6 +30,7 @@ section button{
 }
 .img-container{
     position: relative;
+    width:  100%;
     top: 245px;
     display: flex;
     flex-direction: row;
@@ -37,10 +40,19 @@ section button{
 }
 #abre{
     position: relative;
-    top: 190px;
-    left: 320px;
     color: #fafafa;
     cursor: pointer;
+}
+#logout{
+    position: relative;
+    height: 40px;
+    padding: 10px 20px;
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+    margin: auto 0;
+    color: #fafafa;
+    background-color: rgb(209, 72, 72);
 }
 .container {
     position: fixed;
@@ -54,19 +66,6 @@ section button{
     border-bottom: 4px dashed black;
     box-shadow: 0px 1px 10px;
     z-index: 1000;
-}
-#logout{
-    position: relative;
-    top: -70px;
-    right: -340px;
-    height: 40px;
-    padding: 10px 20px;
-    cursor: pointer;
-    border: none;
-    border-radius: 10px;
-    margin: auto 0;
-    color: #fafafa;
-    background-color: rgb(209, 72, 72);
 }
 .sub-container{
     display: flex;
@@ -143,9 +142,28 @@ section button{
     object-position: 100% 10%;
     border: 1px solid #fafafa;
 }
+#opcoes-responsiva{
+    display: none;
+    background-color: black;
+    color: #fafafa;
+    width: 100%;
+    padding: 10px 5px;
+}
+.container-obj{
+    margin: auto 5px;
+}
 @media (max-width: 768px) {
+    #opcoes-responsiva{
+        display: block;
+    }
+    .sub-container{
+        width: 50%;
+    }
     .box-img {
         width: 48%;
+    }
+    .opcoes{
+        display: none;
     }
 }
 

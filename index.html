@@ -3,16 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="js/hash.js"></script>
+    <script src="js/sha256.js"></script>
     <script src="js/script.js" defer></script>
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="img/escudo.png">
     <title>Login Criptografado</title>
+    
 </head>
 <body>
     <section id="login">
+        <img id="logo" src="img/escudo.png" alt="logo do botafogo">
         <div class="container_login">
             <input id="senha" type="password" name="password" placeholder="Senha">
             <button id="logar">Login</button>
+            <p>Senha: "senha"</p>
             <p id="aviso"></p>
         </div>
     </section>

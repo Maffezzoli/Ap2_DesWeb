@@ -1,15 +1,17 @@
 *{
     margin: 0;
     padding: 0;
+    font-family: "OSWALD";
 }
 body{
-    background-color: #8a6e6e;
+    background-color: #757575;
     display: flex;
     height: 100vh;
     justify-content: center;
 }
 #login{
     display: flex;
+    gap: 20px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.774);
     width: 400px;
     height: 400px;
@@ -48,4 +50,15 @@ body{
 #aviso{
     color: #db4646;
     font-weight: bold;
+}
+#logo{
+    position: relative;
+    top: -20px;
+    width: 70px;
+}
+@media (max-width: 768px) {
+    #login{
+        flex-direction: column;
+        gap: 0px;
+    }
 }

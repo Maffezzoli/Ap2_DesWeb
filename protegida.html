@@ -13,6 +13,10 @@
     crossorigin="anonymous"
     referrerpolicy="no-referrer"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="img/escudo.png">
 </head>
 <body>
     <header>
@@ -25,9 +29,19 @@
                     <button class="btn fem">Feminino</button>
                     <button class="btn all">Todos</button>
                 </div>
+                <div class="opcoes-select">
+                    <select id="opcoes-responsiva">
+                        <option value="" disabled selected hidden>Selecione uma opção</option>
+                        <option class="btn masc" value="masculino">Masculino</option>
+                        <option class="btn fem" value="feminino">Feminino</option>
+                        <option class="btn all" value="all">Todos</option>
+                    </select>
+                </div>
             </div>
-            <button id="logout">LOGOUT</button>
-        <i id="abre" class="fa-solid fa-chevron-up"></i>
+                <div class="container-obj">
+                    <button id="logout">LOGOUT</button>
+                    <i id="abre" class="fa-solid fa-chevron-up"></i>
+                </div>
         </div>
     </header>
     <section>
